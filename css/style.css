@@ -1,0 +1,405 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px; /*1rem*/
+    font-family: 'Hind', sans-serif;
+}
+
+
+/* Header */
+header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9;
+    /* background-color: transparent !important; */
+}
+
+.navbar-brand i {
+    color: green;
+    font-size: 3rem;
+}
+
+.navbar-brand span {
+    font-size: 2.5rem;
+}
+
+.navbar-nav .nav-item {
+    margin: 0 10px;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #35a22c;
+}
+
+.navbar-nav .nav-item .nav-link {
+    transition: all 0.5s;
+    color: white;
+}
+
+.navbar-nav .nav-item::after {
+    content: "";
+    width: 0;
+    display: block;
+    height: 3px;
+    background-color: #35a22c;
+    transition: all 0.5s;
+}
+
+.navbar-nav .nav-item.active::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-item:hover::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-item:hover .nav-link {
+    color: #35a22c;
+}
+
+/* Carousel */
+.carousel-item {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.carousel-item .overlay {
+    background: rgba(39,43,54,.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.carousel-item:nth-child(1) {
+    background-image: url(./../image/finland.jpg);
+}
+
+.carousel-item:nth-child(2) {
+    background-image: url(./../image/mountains.jpg);
+}
+
+.carousel-item:nth-child(3) {
+    background-image: url(./../image/mountains-1.jpg);
+}
+
+.carousel-indicators li {
+    height: 13px;
+    width: 13px;
+    border-radius: 50%;
+    border: none;
+}
+
+.carousel-indicators li.active {
+    background-color: #35a22c;
+}
+
+.img__thumb {
+    width: 150px;
+    margin: auto;
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-caption h1 {
+    font-size: 3.5rem;
+}
+
+.carousel-caption p {
+    font-size: 1.5rem;
+}
+
+/* Project */
+.nav .nav-item .nav-link.active {
+    background-color: #35a22c;
+    color: white;
+    border-color: #35a22c;
+}
+
+.nav .nav-item .nav-link {
+    color: black;
+    border: 1px solid black;
+    margin: 0 5px;
+}
+
+.project__item {
+    margin-top: 30px;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 0.4rem rgb(0 0 0 / 13%);
+}
+
+.project__item .card-body {
+    border: 1px solid transparent;
+    border-radius: 0 0 1rem 1rem;
+    transition: all 1s;
+}
+
+.project__item .card-body h4 {
+    font-size: 1.2rem;
+}
+
+.project__item:hover .card-body {
+    border: 1px solid #35a22c;
+    border-top: transparent;
+}
+
+.project__item:hover .card-body h4 {
+    color: #35a22c;
+}
+
+/* FEATURE */
+#feature {
+    /* background-image: url(/image/3.jpg); */
+    /* background-position: center; */
+    /* background-size: cover; */
+    /* background-attachment: fixed; */
+    background: url(/image/3.jpg) center / cover no-repeat fixed;
+    padding: 100px 0;
+    position: relative; 
+}
+
+/* .feature__text {
+    color: white;
+} */
+
+/* .feature__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.664);
+    top: 0;
+    left: 0;
+} */
+
+#feature::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.664);
+    top: 0;
+    left: 0;
+    content: "";
+}
+
+.feature__content {
+    position: relative;
+}
+
+.feature__item {
+    border: 1px solid #ffffff5e;
+    border-radius: 0.7rem;
+    background-color: rgb(255 255 255 / 11%);
+    backdrop-filter: blur(3px);
+    transition: all 0.5s;
+}
+
+.feature__item i {
+    font-size: 3rem;
+    color: #35a22c;
+    margin-bottom: 2rem;
+}
+
+.feature__item h5 {
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.feature__item:hover {
+    background-color: black;
+}
+
+/* AWARD */
+#award {
+    padding: 80px 0;
+    position: relative;
+}
+
+.award__background {
+    /* background-image: url(/image/memphis_3.png);
+    background-position: bottom left;
+    background-size: 50%;
+    background-repeat: no-repeat; */
+    background: url(/image/memphis_3.png) bottom left / 50% no-repeat;
+    /* cái này là shorthand á bạn, đi làm ngta toàn viết như này */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.award__left {
+    background-color: #ffffff00;
+    border: 1px solid white;
+    border-radius: 1rem;
+    box-shadow: 0 0 30px 0 rgb(0 0 0 / 30%);
+    backdrop-filter: blur(3px);
+}
+
+.award__left h1 {
+    font-weight: 700;
+}
+
+.award__left p {
+    color: rgba(0, 0, 0, 0.774);
+}
+
+/* FOOTER */
+#footer {
+    padding: 50px 0;
+    background: #222;
+}
+
+.footer__social a {
+    color: #aaa;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer__social a i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid rgb(78, 76, 76);
+    border-radius: 50%;
+    transition: all 0.5s;
+    /* color: #aaa; */
+}
+
+.footer__social a i:hover {
+    color: green;
+    border: 1px solid #35a22c;
+}
+
+.footer__copyright {
+    padding-top: 30px;
+    margin-top: 30px;
+    border-top: 1px solid rgb(78, 76, 76);
+}
+
+.footer__copyright p {
+    color: #aaa;
+}
+
+/* RESPONSIVE */
+header .navbar-toggler {
+    background-color: #35a22c;
+}
+
+header .navbar-toggler:hover {
+    background-color: #0ea8cf;
+}
+
+@media screen and (max-width:992px) {
+    header .navbar-collapse {
+        background-color: white;
+    }
+
+    #collapsibleNavbar .nav-item::after {
+        height: 0;
+    }
+
+    #collapsibleNavbar .nav-item .nav-link {
+        color: #35a22c;
+    }
+
+    #collapsibleNavbar .nav-item {
+        margin: 0;
+        padding: 0 10px;
+    }
+
+    #collapsibleNavbar .nav-item:hover {
+        background-color: #35a22c;
+    }
+
+    #collapsibleNavbar .nav-item:hover .nav-link{
+        color: white;
+    }
+
+    /* #collapsibleNavBar .nav-item:hover::after, #collapsibleNavBar .nav-item.active::after {
+        width: 0;
+    } */
+}
+
+@media screen and (max-width:376px) {
+    header .navbar-brand i {
+        font-size: 8vw;
+    }
+
+    header .navbar-brand {
+        font-size: 7vw;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .img__thumb {
+        width: 120px;
+    }
+
+    #carousel .carousel-caption h1 {
+        font-size: 5vw;
+        line-height: 5vw;
+    }
+
+    #carousel .carousel-caption p {
+        font-size: 3vw;
+    }
+
+    #carousel .carousel-caption {
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .img__thumb {
+        width: 100px;
+    }
+
+    #carousel .carousel-caption h1 {
+        font-size: 10vw;
+        line-height: 10vw;
+    }
+
+    #carousel .carousel-caption p {
+        font-size: 5vw;
+    }
+
+    #carousel .carousel-caption {
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .project__content .nav .nav-item{
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .project__content .nav .nav-item{
+        margin-bottom: 1rem;
+    }
+
+    .project__content .nav .nav-link{
+        padding: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .award__background {
+        background-size: cover;
+    }
+}
